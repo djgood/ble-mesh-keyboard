@@ -1,3 +1,5 @@
+View this project on [CADLAB.io](https://cadlab.io/project/22910). 
+
 # BLE Split Keyboard Project
 
 ## Project Structure
