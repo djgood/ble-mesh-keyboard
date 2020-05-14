@@ -1,0 +1,169 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 5
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 3150 2325 1275 1375
+U 5F3B1575
+F0 "Battery/Charging" 50
+F1 "battery.sch" 50
+F2 "VSYS" O R 4425 3450 50 
+F3 "SCL" I R 4425 2475 50 
+F4 "SDA" B R 4425 2575 50 
+F5 "CHARGER_~INT" O R 4425 2675 50 
+F6 "CHARGER_~CE" I R 4425 2775 50 
+F7 "GUAGE_~INT" O R 4425 2875 50 
+$EndSheet
+Wire Wire Line
+	5350 3450 4425 3450
+Wire Wire Line
+	4425 2475 7500 2475
+$Sheet
+S 7500 2350 1625 1550
+U 5EF82E12
+F0 "nRF52810" 50
+F1 "nRF52810.sch" 50
+F2 "SCL" O L 7500 2475 50 
+F3 "SDA" B L 7500 2575 50 
+F4 "DCDC_EN1" I L 7500 3550 50 
+F5 "DCDC_EN2" I L 7500 3650 50 
+F6 "DCDC_OK" I L 7500 3450 50 
+F7 "CHARGER_~INT" I L 7500 2675 50 
+F8 "CHARGER_~CE" O L 7500 2775 50 
+F9 "GUAGE_~INT" I L 7500 2875 50 
+$EndSheet
+Wire Wire Line
+	4425 2575 7500 2575
+Wire Wire Line
+	4425 2675 7500 2675
+Wire Wire Line
+	4425 2775 7500 2775
+Wire Wire Line
+	4425 2875 7500 2875
+Wire Wire Line
+	6500 3450 7500 3450
+Wire Wire Line
+	6500 3550 7500 3550
+Wire Wire Line
+	6500 3650 7500 3650
+$Sheet
+S 5350 3275 1150 975 
+U 5F2CE2FC
+F0 "Power" 50
+F1 "power.sch" 50
+F2 "VSYS" I L 5350 3450 50 
+F3 "DCDC_OK" O R 6500 3450 50 
+F4 "DCDC_EN1" I R 6500 3550 50 
+F5 "DCDC_EN2" I R 6500 3650 50 
+$EndSheet
+$Comp
+L power:+3V0 #PWR0147
+U 1 1 5F546621
+P 8750 1200
+F 0 "#PWR0147" H 8750 1050 50  0001 C CNN
+F 1 "+3V0" H 8765 1373 50  0000 C CNN
+F 2 "" H 8750 1200 50  0001 C CNN
+F 3 "" H 8750 1200 50  0001 C CNN
+	1    8750 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5F546710
+P 8750 1200
+F 0 "#FLG0101" H 8750 1275 50  0001 C CNN
+F 1 "PWR_FLAG" H 8750 1373 50  0000 C CNN
+F 2 "" H 8750 1200 50  0001 C CNN
+F 3 "~" H 8750 1200 50  0001 C CNN
+	1    8750 1200
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+BATT #PWR0148
+U 1 1 5F546C58
+P 9250 1200
+F 0 "#PWR0148" H 9250 1050 50  0001 C CNN
+F 1 "+BATT" H 9265 1373 50  0000 C CNN
+F 2 "" H 9250 1200 50  0001 C CNN
+F 3 "" H 9250 1200 50  0001 C CNN
+	1    9250 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 5F546F4D
+P 9250 1200
+F 0 "#FLG0102" H 9250 1275 50  0001 C CNN
+F 1 "PWR_FLAG" H 9250 1373 50  0000 C CNN
+F 2 "" H 9250 1200 50  0001 C CNN
+F 3 "~" H 9250 1200 50  0001 C CNN
+	1    9250 1200
+	-1   0    0    1   
+$EndComp
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 5F556ABC
+P 6825 1100
+F 0 "H1" H 6925 1146 50  0000 L CNN
+F 1 "MountingHole" H 6925 1055 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 6825 1100 50  0001 C CNN
+F 3 "~" H 6825 1100 50  0001 C CNN
+	1    6825 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 5F557617
+P 6825 1350
+F 0 "H2" H 6925 1396 50  0000 L CNN
+F 1 "MountingHole" H 6925 1305 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 6825 1350 50  0001 C CNN
+F 3 "~" H 6825 1350 50  0001 C CNN
+	1    6825 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H3
+U 1 1 5F558D0B
+P 7625 1100
+F 0 "H3" H 7725 1146 50  0000 L CNN
+F 1 "MountingHole" H 7725 1055 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 7625 1100 50  0001 C CNN
+F 3 "~" H 7625 1100 50  0001 C CNN
+	1    7625 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H4
+U 1 1 5F558D11
+P 7625 1350
+F 0 "H4" H 7725 1396 50  0000 L CNN
+F 1 "MountingHole" H 7725 1305 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 7625 1350 50  0001 C CNN
+F 3 "~" H 7625 1350 50  0001 C CNN
+	1    7625 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H5
+U 1 1 5EDD8AC7
+P 6825 1600
+F 0 "H5" H 6925 1646 50  0000 L CNN
+F 1 "MountingHole" H 6925 1555 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 6825 1600 50  0001 C CNN
+F 3 "~" H 6825 1600 50  0001 C CNN
+	1    6825 1600
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
