@@ -185,10 +185,6 @@ Connection ~ 4925 3050
 Wire Wire Line
 	4925 3050 5700 3050
 Wire Wire Line
-	4925 3500 4925 3425
-Wire Wire Line
-	4925 3500 5700 3500
-Wire Wire Line
 	5575 3400 5700 3400
 Wire Wire Line
 	3600 3050 3400 3050
@@ -280,8 +276,6 @@ Wire Wire Line
 Text Notes 5200 4800 0    50   ~ 0
 VIN_OK = VBIAS * (R1 + R2 + R3) / R1\nVIN_OK = 1.21 * 13M / 4.53M\nVIN_OK = 3.5V\n\nVOUT = VBIAS * (R1 + R2 + R3) / (R1 + R2)\nVOUT = 1.21 * 13M / (4.53M + 0.715M)\nVOUT = 3.025V
 Wire Wire Line
-	5100 3600 5700 3600
-Wire Wire Line
 	5100 4000 5100 3950
 $Comp
 L power:GND #PWR?
@@ -296,8 +290,6 @@ F 3 "" H 5100 4000 50  0001 C CNN
 	1    5100 4000
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5100 3650 5100 3600
 $Comp
 L Device:R_US R?
 U 1 1 5F2E204D
@@ -312,12 +304,8 @@ F 4 "RC0603FR-0710KL" H 5100 3800 50  0001 C CNN "Part Number"
 	1    5100 3800
 	1    0    0    -1  
 $EndComp
-Connection ~ 5100 3600
 Wire Wire Line
-	4725 3600 5100 3600
-Connection ~ 4925 3500
-Wire Wire Line
-	4725 3500 4925 3500
+	4725 3600 4925 3600
 $Comp
 L power:+3V0 #PWR?
 U 1 1 5F2E2059
@@ -343,4 +331,18 @@ Text HLabel 4725 3500 0    50   Input ~ 0
 DCDC_EN1
 Text HLabel 4725 3600 0    50   Input ~ 0
 DCDC_EN2
+Wire Wire Line
+	4725 3500 5100 3500
+Wire Wire Line
+	4925 3600 4925 3425
+Connection ~ 4925 3600
+Wire Wire Line
+	4925 3600 5700 3600
+Wire Wire Line
+	5100 3650 5100 3500
+Connection ~ 5100 3500
+Wire Wire Line
+	5100 3500 5700 3500
+Text Notes 2925 4450 0    50   ~ 0
+EN1    EN2\n1       x      ship mode\n0       0      standby\n0       1      enable    (configured by pull-ups)
 $EndSCHEMATC
